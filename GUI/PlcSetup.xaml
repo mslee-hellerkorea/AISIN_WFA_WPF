@@ -1,0 +1,105 @@
+﻿<UserControl x:Class="AISIN_WFA.GUI.PlcSetup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AISIN_WFA.GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="500">
+    <UserControl.Resources>
+        <ResourceDictionary Source="./AisinResourceDictionary.xaml"/>
+    </UserControl.Resources>
+    <Grid x:Name="PlcSetupGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="45*"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Upstream Lane1" Grid.Row="0" Grid.Column="0" Style="{StaticResource GroupBoxStyle_General}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="100*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="100*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Station Number" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelStyle_GeneralDescription}"/>
+                <TextBox x:Name="Lane1UpstreamStationNumber" Text="{Binding Path=Lane1UpstreamStationNumber}" Grid.Row="0" Grid.Column="1" Style="{StaticResource TextBoxStyle_General}"/>
+
+                <Label Content="Barcode Address" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelStyle_GeneralDescription}"/>
+                <TextBox x:Name="MxAddrBarcodeLane1" Text="{Binding Path=MxAddrBarcodeLane1}" Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBoxStyle_General}"/>
+
+                <Label Content="Board Available Address" Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelStyle_GeneralDescription}"/>
+                <TextBox x:Name="MxAddrBoardAvaiableLane1" Text="{Binding Path=MxAddrBoardAvaiableLane1}" Grid.Row="2" Grid.Column="1" Style="{StaticResource TextBoxStyle_General}"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Upstream Lane2" Grid.Row="0" Grid.Column="1" Style="{StaticResource GroupBoxStyle_General}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="100*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="100*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Station Number" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelStyle_GeneralDescription}"/>
+                <TextBox x:Name="Lane2UpstreamStationNumber" Text="{Binding Path=Lane2UpstreamStationNumber}" Grid.Row="0" Grid.Column="1" Style="{StaticResource TextBoxStyle_General}"/>
+
+                <Label Content="Barcode Address" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelStyle_GeneralDescription}"/>
+                <TextBox x:Name="MxAddrBarcodeLane2" Text="{Binding Path=MxAddrBarcodeLane2}" Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBoxStyle_General}"/>
+
+                <Label Content="Board Available Address" Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelStyle_GeneralDescription}"/>
+                <TextBox x:Name="MxAddrBoardAvaiableLane2" Text="{Binding Path=MxAddrBoardAvaiableLane2}" Grid.Row="2" Grid.Column="1" Style="{StaticResource TextBoxStyle_General}"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="Downstream Lane1" Grid.Row="1" Grid.Column="0" Style="{StaticResource GroupBoxStyle_General}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="100*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="100*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Station Number" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelStyle_GeneralDescription}"/>
+                <TextBox x:Name="Lane1DownstreamStationNumber" Text="{Binding Path=Lane1DownstreamStationNumber}" Grid.Row="0" Grid.Column="1" Style="{StaticResource TextBoxStyle_General}"/>
+
+                <Label Content="Rail Width Address" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelStyle_GeneralDescription}"/>
+                <TextBox x:Name="MxAddrRailWidthLane1" Text="{Binding Path=MxAddrRailWidthLane1}" Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBoxStyle_General}"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Downstream Lane2" Grid.Row="1" Grid.Column="1" Style="{StaticResource GroupBoxStyle_General}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="100*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="100*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Station Number" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelStyle_GeneralDescription}"/>
+                <TextBox x:Name="Lane2DownstreamStationNumber" Text="{Binding Path=Lane2DownstreamStationNumber}" Grid.Row="0" Grid.Column="1" Style="{StaticResource TextBoxStyle_General}"/>
+
+                <Label Content="Rail Width Address" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelStyle_GeneralDescription}"/>
+                <TextBox x:Name="MxAddrRailWidthLane2" Text="{Binding Path=MxAddrRailWidthLane2}" Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBoxStyle_General}"/>
+
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

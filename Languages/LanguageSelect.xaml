@@ -1,0 +1,14 @@
+﻿<Window x:Class="AISIN_WFA.Languages.LanguageSelect"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AISIN_WFA.Languages"
+        mc:Ignorable="d" Height="120.005" Width="341.339" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Topmost="True" ShowInTaskbar="False">
+    <Grid>
+        <ComboBox x:Name="cbSelectLanguage" ItemsSource="{Binding Languages}" IsSynchronizedWithCurrentItem="True" HorizontalAlignment="Left" Height="23" Margin="141,32,0,0" VerticalAlignment="Top" Width="163" IsReadOnly="True" 
+                  SelectionChanged="cbSelectLanguage_SelectionChanged"/>
+        <Label Content="Select Language:" HorizontalAlignment="Left" Height="23" Margin="38,32,0,0" VerticalAlignment="Top" Width="98"/>
+    </Grid>
+</Window>

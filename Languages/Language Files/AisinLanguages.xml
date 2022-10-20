@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AisinLanguages>
+	<CurrentLanguage>English</CurrentLanguage>
+	<Language>
+		<Name>English</Name>
+		<Culture>en-US</Culture>
+		<Filename>HellerMessages.en-US.xml</Filename>
+	</Language>
+	<Language>
+		<Name>Japanese</Name>
+		<Culture>ja-JP</Culture>
+		<Filename>HellerMessages.ja-JP.xml</Filename>
+	</Language>
+</AisinLanguages>

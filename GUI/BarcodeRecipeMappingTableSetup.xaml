@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="AISIN_WFA.GUI.BarcodeRecipeMappingTableSetup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AISIN_WFA.GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary Source="./AisinResourceDictionary.xaml"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Barcode recipe mapping table setup" Grid.Column="0" Grid.ColumnSpan="8"/>
+        <DataGrid x:Name="MappingTable" Grid.Row="1" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="8" 
+                  AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Barcode Pattern test" Binding="{Binding Path=BarcodePattern}" Width="*"/>
+                <DataGridTextColumn Header="Recipe" Binding="{Binding Path=Recipe}" Width="*" />
+                <DataGridTextColumn Header="Rail Width(mm)" Binding="{Binding Path=RailWidth}" Width="*" />
+                <DataGridTextColumn Header="Belt Speed(mm/min)" Binding="{Binding Path=BeltSpeed}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="8" Content="Tips:"/>
+        <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="8" Content="1.  If you only want to bind barcode with recipe, you can just leave Belt Width and Belt Speed to be empty."/>
+        <Label Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="8" Content="2. Belt Speed and Belt Width should not contain non-didital  or non-decimal values. Recipe name should not contain .job or .json."/>
+        <Label Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="8" Content="3. For the barcode pattern, you can use * to match all the other charaters of lane barcode."/>
+        <Label Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="8" Content="    Example 1:   Barcode pattern： *Heller*  can match with the lane barcode:  JoinHellerIndus."/>
+        <Label Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="8" Content="    Example 2:   Barcode pattern:  *Heller*2018* can match with the lane barcode:  JoinHellerIn2018Year."/>
+
+        <Button x:Name="btnAddRow" Tag="AddRow" Grid.Row="11" Grid.Column="0" Content="Add Row" Click="button_Click"/>
+        <Button x:Name="btnDeleteRow" Tag="DeleteRow" Grid.Row="11" Grid.Column="2" Content="Delete Row" Click="button_Click"/>
+        <Button x:Name="btnSave" Tag="Save" Grid.Row="11" Grid.Column="8" Content="Save" Click="button_Click"/>
+    </Grid>
+</UserControl>

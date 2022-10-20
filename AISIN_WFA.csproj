@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C1A00FE-EE8D-47FE-85EB-24ED05E6E191}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AISIN_WFA</RootNamespace>
+    <AssemblyName>AISIN_WFA</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxHELLERCOMMLib">
+      <HintPath>Packages\OCX_80049\AxHELLERCOMMLib.dll</HintPath>
+    </Reference>
+    <Reference Include="HELLERCOMMLib">
+      <HintPath>Packages\OCX_80049\HELLERCOMMLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.ActSupportMsgLib">
+      <HintPath>Packages\MxComponent\Interop.ActSupportMsgLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.ActUtlTypeLib">
+      <HintPath>Packages\MxComponent\Interop.ActUtlTypeLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PropertyChanged, Version=2.2.6.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd, processorArchitecture=MSIL">
+      <HintPath>packages\PropertyChanged.Fody.2.2.6\lib\net452\PropertyChanged.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="GUI\BarcodeRecipeMappingTableSetup.xaml.cs">
+      <DependentUpon>BarcodeRecipeMappingTableSetup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BottomStatePanel.xaml.cs">
+      <DependentUpon>BottomStatePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainOverviewPanel.xaml.cs">
+      <DependentUpon>MainOverviewPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\OlderBarcodeStatePanel.xaml.cs">
+      <DependentUpon>OlderBarcodeStatePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\OldSettingPanel.xaml.cs">
+      <DependentUpon>OldSettingPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\OvenLaneStatePanel.xaml.cs">
+      <DependentUpon>OvenLaneStatePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PlcSetup.xaml.cs">
+      <DependentUpon>PlcSetup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RailSetupPanel.xaml.cs">
+      <DependentUpon>RailSetupPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SetupPanel.xaml.cs">
+      <DependentUpon>SetupPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ViewHelper.xaml.cs">
+      <DependentUpon>ViewHelper.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BarcodeControl.cs" />
+    <Compile Include="Model\BarcodeMappingTable.cs" />
+    <Compile Include="Model\BarcodeRecipe.cs" />
+    <Compile Include="Model\BarcodeState.cs" />
+    <Compile Include="Model\ChannelInfo.cs" />
+    <Compile Include="Model\DownstreamPlcData.cs" />
+    <Compile Include="Model\MxWrapper.cs" />
+    <Compile Include="Model\ObservableDictionary.cs" />
+    <Compile Include="Model\OcxWrapper.cs" />
+    <Compile Include="Model\OvenState.cs" />
+    <Compile Include="Model\RegexLib.cs" />
+    <Compile Include="Model\UpstreamPlcData.cs" />
+    <Compile Include="Setup\AisinSetup.cs" />
+    <Compile Include="Setup\BarcodeSetup.cs" />
+    <Compile Include="Setup\GeneralSetup.cs" />
+    <Compile Include="Setup\LaneRailSetup.cs" />
+    <Compile Include="Setup\OmronPlcSetup.cs" />
+    <Compile Include="Setup\PlcSetup.cs" />
+    <Compile Include="Setup\SetupControl.cs" />
+    <Compile Include="Threads\AisinManager.cs" />
+    <Compile Include="Threads\Hc2OcxThread.cs" />
+    <Compile Include="Threads\MxPlcThread.cs" />
+    <Compile Include="Util\AisinEnums.cs" />
+    <Compile Include="Util\AisinParms.cs" />
+    <Compile Include="Util\HandleUtil.cs" />
+    <Compile Include="Util\HLog.cs" />
+    <Compile Include="Util\UseXMLConfig.cs" />
+    <Page Include="GUI\AisinResourceDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\BarcodeRecipeMappingTableSetup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\BottomStatePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\MainOverviewPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\OlderBarcodeStatePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\OldSettingPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\OvenLaneStatePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\PlcSetup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\RailSetupPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\SetupPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\ViewHelper.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Languages\LanguageSelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Languages\AisinLanguageDictionary.cs" />
+    <Compile Include="Languages\LangaugeChangedEventManager.cs" />
+    <Compile Include="Languages\LanguageSelect.xaml.cs">
+      <DependentUpon>LanguageSelect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Languages\LanguageViewModel.cs" />
+    <Compile Include="Languages\TranslationData.cs" />
+    <Compile Include="Languages\TranslationManager.cs" />
+    <Compile Include="Languages\XmlTranslationProvider.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\AisinCollections.cs" />
+    <Compile Include="Model\AisinParameters.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Languages\AisinLanguage.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Languages\Language Files\AisinLanguages.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Languages\Language Files\AisinMessages.en-US.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Languages\Language Files\AisinMessages.ja-JP.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Fody.2.4.2\build\Fody.targets" Condition="Exists('packages\Fody.2.4.2\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Fody.2.4.2\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Fody.2.4.2\build\Fody.targets'))" />
+  </Target>
+</Project>

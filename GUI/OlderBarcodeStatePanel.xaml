@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="AISIN_WFA.GUI.OlderBarcodeStatePanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AISIN_WFA.GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary Source="./AisinResourceDictionary.xaml"/>
+    </UserControl.Resources>
+    <Grid x:Name="UpstreamPlcStateGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="60*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Barcode Lane1" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelStyle_GeneralDescription}"/>
+        <TextBox Text="{Binding Path=BarcodeDigitLane1}" Grid.Row="0" Grid.Column="1" Style="{StaticResource TextBoxStyle_GeneralLeftAlign}"/>
+        <TextBox Text="{Binding Path=BarcodeStringLane1}" Grid.Row="0" Grid.Column="2" Style="{StaticResource TextBoxStyle_GeneralLeftAlign}"/>
+
+        <Label Content="Barcode Lane2" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelStyle_GeneralDescription}"/>
+        <TextBox Text="{Binding Path=BarcodeDigitLane2}" Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBoxStyle_GeneralLeftAlign}"/>
+        <TextBox Text="{Binding Path=BarcodeStringLane2}" Grid.Row="1" Grid.Column="2" Style="{StaticResource TextBoxStyle_GeneralLeftAlign}"/>
+
+        <Label Content="BA Signal Lane1" Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelStyle_GeneralDescription}"/>
+        <TextBox Text="{Binding Path=BoadAvailableLane1}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"  Style="{StaticResource TextBoxStyle_GeneralLeftAlign}"/>
+
+        <Label Content="BA Signal Lane2" Grid.Row="3" Grid.Column="0" Style="{StaticResource LabelStyle_GeneralDescription}"/>
+        <TextBox Text="{Binding Path=BoadAvailableLane2}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource TextBoxStyle_GeneralLeftAlign}"/>
+
+    </Grid>
+</UserControl>
